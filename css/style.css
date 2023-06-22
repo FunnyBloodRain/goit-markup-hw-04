@@ -6,6 +6,8 @@
     --light--color:#ffffff;
     --blue--color:#4D5AE5;
     --btn--color:#e7e9fc;
+    --icon--color:#31d0aa;
+    --modal--color:#FCFCFC;
 }
 
 img {
@@ -67,6 +69,9 @@ padding: 0 15px 0 15px;
     border-bottom: 1px solid #e7e9fc;
     line-height: 1.17; 
     color: var(--main--color);
+    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-logo {
     margin-right: 76px;
@@ -93,6 +98,8 @@ padding: 0 15px 0 15px;
 .header-menu {
   display: flex;
   gap: 40px;
+  position: relative;
+  color: var(--back--color);
 }
 
 
@@ -186,6 +193,7 @@ gap: 40px;
     border: none;
     border-radius: 4px;
     margin-top: 48px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .f-btn {
@@ -249,6 +257,36 @@ gap: 40px;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+
+  /* .backdrop {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main--color)rgba(46, 47, 66, 0.4);
+    transition: opacity var(--light--color); visibility: var(--main--color);
+  } */
+
+  .modal {
+    position: absolute;
+    z-index: -1;
+    width: 408px;
+    height: 584px;
+    top: 80px;
+    left: 516px;
+    background-color: var(--modal--color);
+  }
+  .backdrop .is-hidden .modal {
+   transform: translate(-50%, -50) scale(0);
+
+   .is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: 0;
+   }
   }
 
 .text-section {
@@ -332,7 +370,7 @@ gap: 40px;
 .container-our {
     display: flex;
     gap: 24px;
-    padding: 32px 16px 32px
+    /* padding: 32px 16px 32px */
 }
 .section-our-li {
     border-radius: 0px 0px 4px 4px; 
@@ -352,6 +390,12 @@ gap: 40px;
     padding: 32px 16px;
 }
 .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/herobg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 1440px;;
     display: flex;
     font-family: "Roboto";
     font-weight: 500;
@@ -421,7 +465,6 @@ gap: 40px;
 
 
 .footer {
-    
     background-color: var(--main--color);
     padding: 100px 0;
 }
@@ -452,21 +495,79 @@ gap: 40px;
     text-transform: uppercase
 }
 
-.section-our-icons {
-    border-radius: 50%;
-    background-color: var(--blue--color);
+.icons {
+  display: flex;
+  gap: 16px; 
+}
+
+.li-icon {
     width: 40px;
     height: 40px;
 }
 
-.icons {
+.a-icon {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue--color);
+    border-radius: 50%;
     display: flex;
-    gap: 24px;
     align-items: center;
-    top: 12px;
-    left: 12px;
-    fill: var(--white--color);
-    align-items: center;
-    
+    justify-content: center;
 }
 
+
+.a-icon:hover, .a-icon:focus {
+    background-color: var(--icon--color);
+}
+.svg-icon {
+    fill: var(--white--color);
+}
+
+
+.div-all-footer {
+    display: flex;
+    align-items: baseline;
+}
+
+.div-footer {
+    margin-right: 120px;
+}
+
+
+
+
+.p-soc-footer {
+    display: flex;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--light--color);
+margin-bottom: 16px;
+}
+
+.ul-icon {
+    display: flex;
+    gap: 16px;
+}
+
+
+.li-icon-footer {
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.a-icon-footer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue--color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-icon-footer:hover, .a-icon-footer:focus {
+    background-color: var(--icon--color);
+}
