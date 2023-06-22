@@ -299,6 +299,7 @@ gap: 40px;
 }
 
 .section-p {
+    display: flex;
     text-align: center; 
     font-family: "Roboto";
     line-height: 1.5;
@@ -306,6 +307,8 @@ gap: 40px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text--color);
+    width: 264px;
+    height: 72px;
   
 }
 .section-style {
@@ -313,7 +316,19 @@ gap: 40px;
 }
 
 
+.uhicons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color:  var(--white--color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    
+}
+
 .section-h {
+    display: flex;
     text-align: center; 
     margin-bottom: 8px;
     font-weight: 500;
@@ -321,10 +336,20 @@ gap: 40px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--main--color);
+    width: 264px;
+    height: 24px;
    
 }
 .what-are {
     padding-bottom: 120px; 
+}
+
+.section-text-container {
+    width: 264px;
+    height: 224px;
+    top: 792px;
+    left: 156px;
+    gap: 8px;
 }
 
 
