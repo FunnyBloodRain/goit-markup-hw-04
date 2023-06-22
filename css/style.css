@@ -299,7 +299,6 @@ gap: 40px;
 }
 
 .section-p {
-    display: flex;
     text-align: center; 
     font-family: "Roboto";
     line-height: 1.5;
@@ -307,8 +306,6 @@ gap: 40px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text--color);
-    width: 264px;
-    height: 72px;
   
 }
 .section-style {
@@ -316,19 +313,17 @@ gap: 40px;
 }
 
 
-.uhicons {
+.div-uhicon {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 112px;
-    background-color:  var(--white--color);
+    background-color: var(--white--color);
     border-radius: 4px;
     margin-bottom: 8px;
-    
 }
 
 .section-h {
-    display: flex;
     text-align: center; 
     margin-bottom: 8px;
     font-weight: 500;
@@ -336,8 +331,6 @@ gap: 40px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--main--color);
-    width: 264px;
-    height: 24px;
    
 }
 .what-are {
@@ -415,12 +408,12 @@ gap: 40px;
     padding: 32px 16px;
 }
 .hero {
+    max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
     url(../images/herobg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-width: 1440px;;
     display: flex;
     font-family: "Roboto";
     font-weight: 500;
@@ -483,6 +476,8 @@ gap: 40px;
     margin-bottom: 72px;
 
 }
+
+
 
 
 /* ===========FOOTER========= */
