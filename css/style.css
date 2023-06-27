@@ -70,7 +70,7 @@ padding: 0 15px 0 15px;
     border-bottom: 1px solid #e7e9fc;
     line-height: 1.17; 
     color: var(--main--color);
-    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -99,7 +99,7 @@ padding: 0 15px 0 15px;
 .header-menu {
   display: flex;
   gap: 40px;
-  position: relative;
+  
   color: var(--back--color);
 }
 
@@ -121,7 +121,9 @@ padding: 0 15px 0 15px;
     line-height: 1.5em; 
     letter-spacing: 0.02em;
     color: var(--main--color);
-    
+    position: relative;
+    color: var(--back--color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-ad-link {
@@ -134,6 +136,7 @@ padding: 0 15px 0 15px;
     color: var(--text--color);
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link:hover {
@@ -148,6 +151,7 @@ padding: 0 15px 0 15px;
     padding-bottom: 24px;
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 
@@ -546,6 +550,7 @@ gap: 40px;
 .a-customers:hover, .a-customers:focus {
     color: var(--back--color);
     border-color: var(--back--color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-customers {
@@ -668,4 +673,15 @@ margin-bottom: 16px;
 
 .a-icon-footer:hover, .a-icon-footer:focus {
     background-color: var(--icon--color);
+}
+
+
+::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    height: 4px;
+    background-color: var(--main--color);
+    border-radius: 2px;
 }
