@@ -391,7 +391,7 @@ gap: 40px;
 }
 
 .div-our {
-    padding: 32px 0 32p;
+    padding: 32px 0 32px;
 }
 
 
@@ -681,6 +681,7 @@ gap: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .a-icon-footer:hover, .a-icon-footer:focus {
